@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci --ignore-scripts",
+  "framework": "vite"
+}
