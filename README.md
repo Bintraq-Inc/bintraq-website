@@ -110,7 +110,18 @@ Add these to your `.env.local` for development:
 VITE_API_BASE_URL=your_api_url_here
 ```
 
-### Vercel Deployment Secrets
+**Note:** `.env.local` is gitignored and should never be committed. Copy `.env.example` and rename it to `.env.local` locally.
+
+### Production Environment Variables
+
+For production (Vercel), set environment variables in the Vercel Dashboard:
+
+1. Go to https://vercel.com/dashboard
+2. Select your project **bintraq-website**
+3. Click **Settings** → **Environment Variables**
+4. Add your production environment variables
+
+These will override local `.env.local` when deployed.
 
 Required GitHub secrets for CI/CD:
 
