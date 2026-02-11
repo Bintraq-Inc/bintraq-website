@@ -1,14 +1,11 @@
-# Bintraq - Smart Waste Management Platform
 
 <div align="center">
-  <img src="./src/assets/bintraq-logo.png" alt="Bintraq Logo" width="200" />
+  <img src="./src/assets/bintraq-logo.png" alt="Bintraq Logo" width="500" />
 </div>
-
-Bintraq is a **smart waste management platform** focused on building innovative solutions for efficient waste collection and environmental sustainability in South Sudan.
 
 ## About Bintraq
 
-Bintraq is a green technology project that combines USSD, mobile applications, IoT-enabled bin sensors, and a centralized monitoring platform to improve waste management efficiency, transparency, and environmental accountability. The platform helps households and businesses manage waste responsibly while supporting cleaner, healthier, and more sustainable communities.
+Bintraq is a green technology project that combines USSD, mobile applications, IoT-enabled bin sensors, and a centralized monitoring platform to improve waste management efficiency, transparency, and environmental accountability. The platform helps households and businesses manage waste responsibly while supporting cleaner, healthier, and more sustainable communities in South Sudan.
 
 ## What We Do
 
@@ -33,6 +30,7 @@ We provide an integrated, easy-to-use system for scheduling, tracking, and manag
 ## Tech Stack
 
 ### Frontend
+
 - **React 19** — Modern UI library for building interactive interfaces
 - **TypeScript** — Type-safe JavaScript for robust code
 - **Vite** — Lightning-fast build tool and development server
@@ -50,17 +48,20 @@ We provide an integrated, easy-to-use system for scheduling, tracking, and manag
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Bintraq-Inc/bintraq-website.git
    cd bintraq-website
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm ci
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    ```
@@ -81,6 +82,7 @@ We provide an integrated, easy-to-use system for scheduling, tracking, and manag
 ### Code Quality
 
 This project enforces:
+
 - TypeScript strict mode
 - ESLint with recommended rules
 - Prettier code formatting
@@ -111,6 +113,7 @@ VITE_API_BASE_URL=your_api_url_here
 ### Vercel Deployment Secrets
 
 Required GitHub secrets for CI/CD:
+
 - `VERCEL_TOKEN` — Vercel API token
 - `ORG_ID` — Vercel organization ID
 - `PROJECT_ID` — Vercel project ID
@@ -150,8 +153,8 @@ This project is proprietary software owned by Bintraq Inc. All rights reserved.
 ## Contact & Support
 
 For more information about Bintraq and our waste management solutions, visit:
-- **Website** — [bintraq.com](https://bintraq.com)
-- **Email** — support@bintraq.com
+
+- **Email** — <dhieumajok211@gmail.com>
 
 ---
 
