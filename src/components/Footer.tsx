@@ -3,15 +3,15 @@ import bintraqLogo from '@/assets/bintraq-logo.png'
 
 const footerLinks = {
   company: [
-    { name: 'About', path: '/' },
-    { name: 'Careers', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ],
   solutions: [
-    { name: 'USSD Services', path: '/solutions' },
-    { name: 'Mobile App', path: '/solutions' },
-    { name: 'IoT Sensors', path: '/solutions' },
-    { name: 'Monitoring', path: '/solutions' },
+    { name: 'USSD Services', path: '/ussd-access' },
+    { name: 'Mobile App', path: '/mobile-application' },
+    { name: 'IoT Sensors', path: '/iot-bin-sensors' },
+    { name: 'Monitoring', path: '/monitoring-platform' },
   ],
   sectors: [
     { name: 'Households', path: '/sectors' },
@@ -28,6 +28,7 @@ const footerLinks = {
 const socialLinks = [
   { icon: 'language', href: '#', label: 'Website' },
   { icon: 'mail', href: 'mailto:dhieumajok211@gmail.com', label: 'Email' },
+  { icon: 'code', href: 'https://github.com/Bintraq-Inc/bintraq-website', label: 'GitHub' },
 ]
 
 export default function Footer() {

@@ -1,4 +1,7 @@
 # Bintraq Website - AI Coding Instructions
+Bintraq is a smart waste management platform focused on building innovative solutions for efficient waste collection and environmental sustainability in South Sudan.
+
+Bintraq is a green technology project that combines USSD, a mobile application, IoT-enabled bin sensors, and a centralized monitoring platform to improve waste management efficiency, transparency, and environmental accountability. The platform helps households and businesses manage waste responsibly while supporting cleaner, healthier, and more sustainable communities.
 
 Waste management platform marketing website built with React 19, TypeScript, Vite 7, and Tailwind CSS 4.
 

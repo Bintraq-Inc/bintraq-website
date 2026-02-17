@@ -5,13 +5,25 @@ import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'Solutions', path: '/solutions' },
+  { 
+    name: 'Solutions', 
+    path: '/solutions',
+    dropdownItems: [
+      { name: 'USSD Access', path: '/ussd-access' },
+      { name: 'Mobile Application', path: '/mobile-application' },
+      { name: 'IoT Bin Sensors', path: '/iot-bin-sensors' },
+      { name: 'Monitoring Platform', path: '/monitoring-platform' },
+    ]
+  },
   { name: 'Sectors', path: '/sectors' },
+  { name: 'About', path: '/about' },
+  { name: 'Careers', path: '/careers' },
   { name: 'Contact', path: '/contact' },
 ]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const location = useLocation()
 
   return (
@@ -26,22 +38,67 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-10 items-center">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-semibold transition-colors relative group ${
-                  location.pathname === link.path
-                    ? 'text-primary'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-primary'
-                }`}
-              >
-                {link.name}
-                <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all ${
-                    location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}
-                />
-              </Link>
+              <div key={link.path} className="relative group">
+                {link.dropdownItems ? (
+                  <>
+                    <Link
+                      to={link.path}
+                      className={`text-sm font-semibold transition-colors relative flex items-center gap-1 ${
+                        location.pathname === link.path || link.dropdownItems.some(item => location.pathname === item.path)
+                          ? 'text-primary'
+                          : 'text-slate-600 dark:text-slate-300 hover:text-primary'
+                      }`}
+                    >
+                      <span>{link.name}</span>
+                      <span className="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+                      <span
+                        className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all ${
+                          location.pathname === link.path || link.dropdownItems.some(item => location.pathname === item.path)
+                            ? 'w-full' 
+                            : 'w-0 group-hover:w-full'
+                        }`}
+                      />
+                    </Link>
+                    
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl py-4 z-50 opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+                      <div className="px-4 pb-2 mb-2 border-b border-slate-100 dark:border-white/10">
+                        <div className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">
+                          {link.name}
+                        </div>
+                      </div>
+                      {link.dropdownItems.map((item) => (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className={`block px-4 py-2 text-sm font-medium transition-colors ${
+                            location.pathname === item.path
+                              ? 'text-primary bg-green-50 dark:bg-green-900/20'
+                              : 'text-slate-700 dark:text-slate-300 hover:text-primary hover:bg-slate-50 dark:hover:bg-white/5'
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`text-sm font-semibold transition-colors relative group ${
+                      location.pathname === link.path
+                        ? 'text-primary'
+                        : 'text-slate-600 dark:text-slate-300 hover:text-primary'
+                    }`}
+                  >
+                    {link.name}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all ${
+                        location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -76,18 +133,47 @@ export default function Header() {
           <nav className="md:hidden py-6 border-t border-slate-100 dark:border-white/5">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg font-semibold py-2 transition-colors ${
-                    location.pathname === link.path
-                      ? 'text-primary'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-primary'
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                <div key={link.path}>
+                  {link.name === 'Solutions' ? (
+                    <>
+                      <button
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                        className="text-lg font-semibold py-2 transition-colors text-slate-600 dark:text-slate-300 hover:text-primary flex items-center justify-between w-full"
+                      >
+                        Solutions
+                        <span className="material-symbols-outlined text-[20px]">
+                          {dropdownOpen ? 'expand_less' : 'expand_more'}
+                        </span>
+                      </button>
+                      {dropdownOpen && (
+                        <div className="pl-4 mt-2 flex flex-col gap-2">
+                          {navLinks.find(l => l.name === 'Solutions')?.dropdownItems?.map((sublink) => (
+                            <Link
+                              key={sublink.path}
+                              to={sublink.path}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="py-2 text-sm text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                            >
+                              {sublink.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`text-lg font-semibold py-2 transition-colors ${
+                        location.pathname === link.path
+                          ? 'text-primary'
+                          : 'text-slate-600 dark:text-slate-300 hover:text-primary'
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <Link
                 to="/contact"
