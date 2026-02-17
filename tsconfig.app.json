@@ -24,9 +24,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     
-    // Path aliases - ignoring deprecation for now
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
+    // Path aliases
     "paths": {
       "@/*": ["./src/*"]
     }
