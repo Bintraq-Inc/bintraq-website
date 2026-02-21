@@ -104,7 +104,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-100 dark:border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="border-t border-slate-100 dark:border-white/5 pt-10 flex flex-col md:flex-row justify-end items-center gap-6">
           <p className="text-sm text-slate-400">
             © {currentYear} Bintraq Inc. All rights reserved.
           </p>
