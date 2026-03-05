@@ -1,4 +1,4 @@
-name: Bintraq Production CI/CD
+name: Bintraq github-pages CI/CD
 
 on:
   push:
