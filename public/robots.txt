@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bintraq.com/sitemap.xml

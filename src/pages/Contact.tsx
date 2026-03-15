@@ -4,8 +4,8 @@ const contactInfo = [
   {
     icon: 'mail',
     title: 'Email',
-    value: 'dhieumajok211@gmail.com',
-    href: 'mailto:dhieumajok211@gmail.com',
+    value: import.meta.env.VITE_CONTACT_EMAIL || 'info@bintraq.com',
+    href: `mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'info@bintraq.com'}`,
   },
   {
     icon: 'location_on',

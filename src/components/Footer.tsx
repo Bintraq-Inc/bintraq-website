@@ -20,14 +20,14 @@ const footerLinks = {
     { name: 'Events', path: '/sectors' },
   ],
   legal: [
-    { name: 'Privacy Policy', path: '/' },
-    { name: 'Terms of Service', path: '/' },
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' },
   ],
 }
 
 const socialLinks = [
   { icon: 'language', href: '#', label: 'Website' },
-  { icon: 'mail', href: 'mailto:dhieumajok211@gmail.com', label: 'Email' },
+  { icon: 'mail', href: `mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'info@bintraq.com'}`, label: 'Email' },
   { icon: 'code', href: 'https://github.com/Bintraq-Inc/bintraq-website', label: 'GitHub' },
 ]
 

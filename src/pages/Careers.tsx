@@ -86,7 +86,7 @@ export default function Careers() {
 
               <div className="flex flex-wrap gap-5">
                 <a 
-                  href="#open-positions"
+                  href="#available-positions"
                   className="h-16 px-10 rounded-2xl bg-slate-900 dark:bg-primary text-white text-lg font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-3 group"
                 >
                   <span>View Open Positions</span>
@@ -198,7 +198,7 @@ export default function Careers() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <a 
-                    href="mailto:dhieumajok211@gmail.com" 
+                    href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'info@bintraq.com'}`} 
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-colors"
                   >
                     <span className="material-symbols-outlined">email</span>
@@ -273,7 +273,7 @@ export default function Careers() {
             </Link>
           </div>
           <div className="mt-8 text-sm opacity-75">
-            Email us at: dhieumajok211@gmail.com
+            Email us at: {import.meta.env.VITE_CONTACT_EMAIL || 'info@bintraq.com'}
           </div>
         </div>
       </section>
