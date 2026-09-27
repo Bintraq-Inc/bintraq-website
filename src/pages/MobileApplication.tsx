@@ -124,15 +124,15 @@ export default function MobileApplication() {
                 />
                 
                 {/* Floating app features */}
-                <div className="absolute -top-4 -right-8 text-white p-3 rounded-xl shadow-lg animate-bounce" style={{ backgroundColor: '#12a342', animationDelay: '1s' }}>
+                <div className="absolute -top-4 -right-8 text-primary p-3 rounded-xl shadow-lg animate-bounce" style={{ backgroundColor: '#ffe2b8', animationDelay: '1s' }}>
                   <span className="material-symbols-outlined text-xl">notifications</span>
                 </div>
                 
-                <div className="absolute bottom-8 -left-8 text-white p-3 rounded-xl shadow-lg animate-bounce" style={{ backgroundColor: '#12a342', animationDelay: '2s' }}>
+                <div className="absolute bottom-8 -left-8 text-primary p-3 rounded-xl shadow-lg animate-bounce" style={{ backgroundColor: '#ffe2b8', animationDelay: '2s' }}>
                   <span className="material-symbols-outlined text-xl">location_on</span>
                 </div>
                 
-                <div className="absolute top-1/2 -right-12 text-white p-2 rounded-full shadow-lg animate-pulse" style={{ backgroundColor: '#12a342' }}>
+                <div className="absolute top-1/2 -right-12 text-primary p-2 rounded-full shadow-lg animate-pulse" style={{ backgroundColor: '#ffe2b8' }}>
                   <span className="material-symbols-outlined">payment</span>
                 </div>
               </div>
@@ -272,7 +272,7 @@ export default function MobileApplication() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#143E3f] text-white">
+      <section className="py-24 bg-background-light text-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6 font-display">
             Download the App Today

@@ -228,7 +228,7 @@ export default function UssdAccess() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#143E3f] text-white">
+      <section className="py-24 bg-background-light text-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6 font-display">
             Start Using USSD Today
