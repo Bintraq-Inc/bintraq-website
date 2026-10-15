@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import bintraqLogo from '@/assets/bintraq-logo.png'
-import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -27,7 +26,7 @@ export default function Header() {
   const location = useLocation()
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-surface-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-slate-200/50 dark:border-white/5">
+    <header className="sticky top-0 z-50 w-full bg-white border-b-2 border-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -104,9 +103,6 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            {/* Theme Toggle */}
-            <ThemeToggle />
-            
             {/* CTA Button */}
             <Link
               to="/contact"
